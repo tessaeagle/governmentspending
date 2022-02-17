@@ -1,0 +1,13 @@
+name: governmentSpending
+title: governmentSpending
+username:
+account: tessaeagle
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5670281
+bundleId: 5590593
+url: https://tessaeagle.shinyapps.io/governmentspending/
+when: 1645119269.9757
+lastSyncTime: 1645119269.9757
+asMultiple: FALSE
+asStatic: FALSE
