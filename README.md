@@ -5,7 +5,7 @@ This project initially began as a static visualization I completed for the Tidy 
 
 To extend this project, I wanted to make an interactive app to explore the dataset further. For my initial visualization, I only focused on one area of spending (SNAP), but there are many other variables to explore (e.g., education spending, Pell Grants, Medicaid). Shiny, described further below, is a framework for developing interactive web apps in R. The goal of this project was to develop a shiny web application that allowed for further exploration and visualization of the Government Spending dataset. 
 
-<img src='/images/9_15.gif'><br>
+<img src='https://github.com/tessaeagle/governmentspending/blob/main/9_15.gif'><br>
 
 **Project Goal:** Code an interactive Shiny web application to explore the US Government Spending on Kids dataset through an interactive map display<br>
 **Project Year:** 2022
@@ -16,7 +16,7 @@ To code the app, I started with the government spending data. First, I loaded th
 
 Next, I moved on to the map data. I downloaded the geojson file with coordinates for the US states already defined. After cleaning the data and finding the center of each state’s hexagon, I combined the map data with the government spending data to have one final dataframe to work with. These datasets were combined using a left join, meaning that the two datasets were compared by their “state” column and then all the columns from both datasets that had row matches for the “state” value were included in the final dataset. 
 
-<img src='/images/shinyApp.png'><br>
+<img src='https://github.com/tessaeagle/governmentspending/blob/main/shinyApp.png'><br>
 
 ### Visualization
 As described above, {ggplot} provides functions for data visualization using geoms (geometric objects) to plot different shapes (e.g., geom_bar is used for bar charts, geom_point for scatter plots). In this plot, I am using geom_polygons which are plotted from data listing the coordinates of each polygon (positions on the plot). {ggplot} affords control over the smallest details of a plot and everything from the legend background and position to the axis ticks and margins can be altered to fit one’s vision. Aside from the polygon geom that plots the hexagon states, a text geom is used to plot the state abbreviation labels. 
@@ -31,4 +31,4 @@ The server function is where I coded the ggplot visualization and converted the 
 
 The figure below provides an example of the reactivity of the map. In the gif, the fill variable (funding program) is selected at PK -12 Education. The different frames of the gif show the changes made to the map when the year selection changes. The final code for the app can be seen [here](https://github.com/tessaeagle/governmentspending/blob/main/app.R). <br>
 
-<img src='/images/shinyGif.gif'>
+<img src='https://github.com/tessaeagle/governmentspending/blob/main/shinyGif.gif'>
